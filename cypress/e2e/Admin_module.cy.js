@@ -10,7 +10,7 @@ describe("Admin_module" ,()=>{
     cy.Login();
     Adduser_object.Admin_pageURL();
     Adduser_object.add_admin_pageURL();
-    Adduser_object.User__Role()
+    Adduser_object.User__Role().select('Admin').should("have.value", 0);
     Adduser_object.Employee__name()
     Adduser_object.status()
     Adduser_object.username()
